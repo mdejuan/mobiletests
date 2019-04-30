@@ -17,7 +17,7 @@ public class DriverBase {
 	public static void instantiateDriverObject() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("deviceName", "BG2-W09");
-		caps.setCapability("deviceId", "66.249.79.103"); // DeviceId from "adb devices" command
+		caps.setCapability("deviceId", "66.249.79.103:5555"); // DeviceId from "adb devices" command
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "5.1.1");
 		caps.setCapability("skipUnlock", "true");
