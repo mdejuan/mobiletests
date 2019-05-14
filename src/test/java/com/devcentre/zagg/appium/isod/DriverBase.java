@@ -23,7 +23,7 @@ public class DriverBase {
 		caps.setCapability("skipUnlock", "true");
 		caps.setCapability("appPackage", "com.zagg.isod");
 		caps.setCapability("appActivity", "com.zagg.isod.SplashScreenActivity");
-		caps.setCapability("noReset", "false");
+		caps.setCapability("noReset", "true");
 		caps.setCapability("unicodeKeyboard", "true");                                     
 		caps.setCapability("resetKeyboard", "true");
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
