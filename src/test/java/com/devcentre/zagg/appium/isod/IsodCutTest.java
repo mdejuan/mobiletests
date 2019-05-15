@@ -10,8 +10,8 @@ public class IsodCutTest extends DriverBase{
 	@Test
 	public void cutTest() throws InterruptedException {
 		IsodLoginPageTest.login();
-		
-		driver.findElement(By.id("com.zagg.isod:id/search_input")).sendKeys("huawei");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys("huawei");
+		//driver.findElement(By.id("com.zagg.isod:id/search_input")).sendKeys("huawei");
 		
 		Thread.sleep(3000);
 		
