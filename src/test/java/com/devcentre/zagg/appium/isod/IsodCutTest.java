@@ -17,8 +17,7 @@ public class IsodCutTest extends DriverBase{
 		
 		List<MobileElement> elements= driver.findElementsById("com.zagg.isod:id/productImageView");
 		elements.get(0).click();
-	
-    	driver.findElement(By.id("com.zagg.isod:id/requestBlankPatternButtonNext")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/requestBlankPatternButtonNext"))).click();
     	Thread.sleep(3000);
     	driver.findElement(By.id("com.zagg.isod:id/validcode")).sendKeys("az4nx2g");
     	Thread.sleep(2000);

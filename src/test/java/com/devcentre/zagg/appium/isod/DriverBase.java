@@ -17,13 +17,13 @@ public class DriverBase {
 	public static void instantiateDriverObject() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("deviceName", "BG2-W09");
-		caps.setCapability("deviceId", "89.100.208.189:5555"); // DeviceId from "adb devices" command
+		//caps.setCapability("deviceId", "89.100.208.189:5555"); // DeviceId from "adb devices" command
 		caps.setCapability("platformName", "Android");
 		caps.setCapability("platformVersion", "5.1.1");
 		caps.setCapability("skipUnlock", "true");
 		caps.setCapability("appPackage", "com.zagg.isod");
 		caps.setCapability("appActivity", "com.zagg.isod.SplashScreenActivity");
-		caps.setCapability("noReset", "true");
+		caps.setCapability("noReset", "false");
 		caps.setCapability("unicodeKeyboard", "true");                                     
 		caps.setCapability("resetKeyboard", "true");
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);

@@ -13,18 +13,17 @@ public class IsodLoginPageTest extends DriverBase {
 		try {
 			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
 			driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button")).click();
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/twLanguage")));
-			List<MobileElement> elements = driver.findElementsById("com.zagg.isod:id/twLanguage");
-			elements.get(0).click();
-
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/tieStoreId"))).click();
-			driver.findElement(By.id("com.zagg.isod:id/tieStoreId")).sendKeys("devcentrehouse");
-			driver.findElement(By.id("com.zagg.isod:id/tiePassword")).sendKeys("password");
-			driver.findElement(By.id("com.zagg.isod:id/btnLogin")).click();
-			Thread.sleep(3000);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).click();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/twLanguage")));
+		List<MobileElement> elements = driver.findElementsById("com.zagg.isod:id/twLanguage");
+		elements.get(0).click();
+
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/tieStoreId"))).click();
+		driver.findElement(By.id("com.zagg.isod:id/tieStoreId")).sendKeys("devcentrehouse");
+		driver.findElement(By.id("com.zagg.isod:id/tiePassword")).sendKeys("password");
+		driver.findElement(By.id("com.zagg.isod:id/btnLogin")).click();
+
 	}
 }
