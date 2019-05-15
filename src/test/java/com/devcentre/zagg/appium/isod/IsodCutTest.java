@@ -20,7 +20,7 @@ public class IsodCutTest extends DriverBase{
 	
     	driver.findElement(By.id("com.zagg.isod:id/requestBlankPatternButtonNext")).click();
     	Thread.sleep(3000);
-    	driver.findElement(By.id("com.zagg.isod:id/validcode")).sendKeys("a6xj28w");
+    	driver.findElement(By.id("com.zagg.isod:id/validcode")).sendKeys("az4nx2g");
     	Thread.sleep(2000);
     	driver.findElement(By.id("com.zagg.isod:id/btnNext")).click();
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/btnLoad"))).click();
