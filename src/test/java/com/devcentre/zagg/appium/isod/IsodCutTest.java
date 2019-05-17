@@ -9,8 +9,13 @@ import io.appium.java_client.MobileElement;
 public class IsodCutTest extends DriverBase{
 	@Test
 	public void cutTest() throws InterruptedException {
-		/*IsodLoginPageTest.login();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys("huawei");
+		IsodLoginPageTest.login();
+		String name = System.getProperty("param1");
+		if(name != null && !name.equals(""))
+		{
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys(name);
+		}
+		else wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys("huawei");
 			
 		Thread.sleep(3000);
 		
@@ -25,9 +30,9 @@ public class IsodCutTest extends DriverBase{
     	Thread.sleep(7000);
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/btnCut"))).click(); 
     	Thread.sleep(7000);
-    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/btnUnload"))).click();*/
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/btnUnload"))).click();
 		
-		String name = System.getProperty("param1");
+		/*String name = System.getProperty("param1");*/
 		System.out.println("/////////////////////"+name);
     	
 	}
