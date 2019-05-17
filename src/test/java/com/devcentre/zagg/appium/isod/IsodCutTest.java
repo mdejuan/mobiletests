@@ -13,7 +13,7 @@ public class IsodCutTest extends DriverBase{
 		String name = System.getProperty("param1");
 		if(name != null && !name.equals(""))
 		{
-			name.replace("_", " ");
+			name.replaceAll("_", "\\s+");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys(name);
 		}
 		else wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys("huawei");
