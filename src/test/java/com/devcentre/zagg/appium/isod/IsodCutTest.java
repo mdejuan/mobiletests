@@ -11,7 +11,7 @@ public class IsodCutTest extends DriverBase{
 	public void cutTest() throws InterruptedException {
 		IsodLoginPageTest.login();
 		String name = System.getProperty("param1");
-		if(name != null && !name.equals(""))
+		if(name != null && !name.equals("") && !name.equals("$param1"))
 		{
 			name = name.replaceAll("_", " ");
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/search_input"))).sendKeys(name);
