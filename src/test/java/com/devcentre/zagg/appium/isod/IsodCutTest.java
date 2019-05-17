@@ -27,7 +27,7 @@ public class IsodCutTest extends DriverBase{
     	Thread.sleep(7000);
     	wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.zagg.isod:id/btnUnload"))).click();*/
 		
-		String name = System.getProperty("nameW");
+		String name = System.getProperty("param1");
 		System.out.println("/////////////////////"+name);
     	
 	}
